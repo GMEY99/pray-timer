@@ -3,8 +3,8 @@ import requests
 def praying_time():
      city=input('Enter city name: ').lower()
      country=input('Enter country name: ').lower()
-     year=input('Enter year: ')
-     month=input('Enter month: ')
+     year=int(input('Enter year: '))
+     month=int(input('Enter month: '))
      url = f'http://api.aladhan.com/v1/calendarByCity/{year}/{month}?city={city}&country={country}&method=2'
      response = requests.get(url)
      # dd=response.content
